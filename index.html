@@ -25,14 +25,15 @@
 <body>
     <main id="app">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <input type="text" v-model="newToDo">
-                    <button class="btn btn-dark" @click="addToDo">ADD</button>
+            <div class="row mt-5">
+                <div class="col-12 justify-content-center d-flex">
+                    <input type="text" placeholder="ex. Buy Milk" v-model="newToDo" @keyup.enter="addToDo">
+                    <button class="btn btn-dark ms-4 fw-bold" @click="addToDo">ADD</button>
                 </div>
                 <div class="col-12">
                     <div v-for="(element,index) in toDoList">
-                        <span>{{element.text}}</span>
+                        <input type="checkbox" v-model="element.done">
+                        <span :class="(element.done)? 'done' : ''">{{element.text}}</span>
                     </div>
                 </div>
             </div>
