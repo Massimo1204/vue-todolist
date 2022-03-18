@@ -18,16 +18,22 @@ body{
     padding: 1rem 0 1rem 1rem;
     font-size: 1.5rem;
     user-select: none;
-    cursor: pointer;
 }
 
 .to-do-list-item input[type="checkbox"]{
     height: 1.5rem;
     width: 1.5rem;
     vertical-align: center;
+}
+
+.to-do-list-item input[type="checkbox"],
+.to-do-list-item >*{
     cursor: pointer;
 }
 
+.to-do-list-item:hover{
+    background-color: rgb(158, 238, 169);
+}
 .to-do-list-item i:hover{
     color: red;
 }

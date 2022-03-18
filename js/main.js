@@ -18,5 +18,10 @@ const app = new Vue({
         deleteItem(index){
             this.toDoList.splice(index,1);
         },
+
+        checkDone(element){
+            if(element.done)element.done=false;
+            else element.done=true;
+        }
     }
 })
