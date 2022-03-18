@@ -3,17 +3,20 @@ const app = new Vue({
 
     data : {
         newToDo : '',
-        toDoList : []
+        toDoList : [],
     },
 
     methods : {
         addToDo(){
-            const toAdd = {text : this.newToDo, done : false,};
-            this.toDoList.push(toAdd);
+            if(this.newToDo.trim() != ''){
+                const toAdd = {text : this.newToDo, done : false,};
+                this.toDoList.push(toAdd);
+                this.newToDo = '';
+            }
         },
 
         deleteItem(index){
             this.toDoList.splice(index,1);
-        }
+        },
     }
 })

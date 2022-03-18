@@ -33,8 +33,9 @@
                         <button class="btn btn-primary ms-4 fw-bold" @click="addToDo">ADD</button>
                     </div>
                 </div>
-                <div class="col-12 mt-4">
+                <div class="col-12 mt-4" id="my-todolist">
                     <div v-for="(element,index) in toDoList" class="to-do-list-item mb-1 d-flex align-items-center justify-content-between">
+
                         <div class="d-flex align-items-center">
                             <input class="me-2" type="checkbox" v-model="element.done">
                             <span :class="(element.done)? 'done' : ''">{{element.text}}</span>
