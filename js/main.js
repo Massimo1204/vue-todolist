@@ -10,7 +10,10 @@ const app = new Vue({
         addToDo(){
             const toAdd = {text : this.newToDo, done : false,};
             this.toDoList.push(toAdd);
-            console.log(this.toDoList[0].done)
+        },
+
+        deleteItem(index){
+            this.toDoList.splice(index,1);
         }
     }
 })
